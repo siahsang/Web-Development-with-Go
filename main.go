@@ -10,9 +10,10 @@ import (
 )
 
 func main() {
+
 	dbURI := fmt.Sprintf("postgres://%s:%s@%s:%d/%s?sslmode=disable",
 		GetAsString("DB_USER", "postgres"),
-		GetAsString("DB_PASSWORD", "mysecretpassword"),
+		GetAsString("DB_PASSWORD", "postgres"),
 		GetAsString("DB_HOST", "localhost"),
 		GetAsInt("DB_PORT", 5432),
 		GetAsString("DB_NAME", "postgres"),
